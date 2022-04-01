@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./dice.css">
+    <link rel="icon" href="./img/die.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/die.svg">
+    <title>DICE</title>
+
+    <div>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    </div>
+
+</head>
+
+<body>
+    <h1><img class="roll" src="./img/die.svg" alt="Roll"> DICE</h1>
+    <div id="box">
+        <div id="leftbox">
+            <div id="bigdie">
+                <div>Roll all dice</div>
+                <button><img id="die_img" src="./img/die.svg" alt="Roll"></button>
+                <div class="result">Sum</div>
+            </div>
+        </div>
+        <div id="rightbox">
+            <div class="die">
+                <div>Face number</div>
+                <img class="roll" src="./img/roll.svg" alt="Roll">
+                <div>Result</div>
+            </div>
+            <div id="die0" class="die">
+                <input type="text" name="face" class="face" value="6">
+                <img class="roll" src="./img/roll.svg" alt="Roll">
+                <div class="result">Result</div>
+            </div>
+            <div id="controller">
+                <button id="plus"><img id="plus_img" src="./img/plus.svg" alt="+"></button>
+                <button id="minus"><img id="minus_img" src="./img/minus.svg" alt="+"></button>
+            </div>
+        </div>
+    </div>
+    <script src="./dice.js"></script>
+</body>
