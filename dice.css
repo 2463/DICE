@@ -1,4 +1,4 @@
-body{
+body {
     background: #000;
     color: #EEF;
     font-style: normal;
@@ -15,20 +15,49 @@ button {
 
 input[type="text"] {
     font-size: 16px;
-    border-radius: 3px; /*ボックス角の丸み*/
-    border: 2px solid #ddd; /*枠線*/
+    border-radius: 3px;
+    /*ボックス角の丸み*/
+    border: 2px solid #ddd;
+    /*枠線*/
     margin: 8px;
 }
 
-#box {
+@media (max-width: 650px) {
+
+    #box,
+    #rightbox {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 1000px) {
+    #box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #rightbox {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    #box {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #rightbox {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+#box,
+#rightbox {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: start;
 }
 
 #leftbox,
-#rightbox,
 .die,
 #bigdie,
 #controller {
@@ -37,33 +66,16 @@ input[type="text"] {
     align-items: center;
 }
 
-#box,
 .die,
 #bigdie,
 #controller {
     flex-direction: row;
 }
 
-@media (width < 650px) {
-    #box {
-        grid-template-columns: 1fr;
-        align-items: center;
-    }
-}
-
-#leftbox,
-#rightbox {
+#leftbox {
     flex-direction: column;
-}
-
-#leftbox{
-    flex: 1;
     top: 10px;
     position: sticky;
-}
-
-#rightbox {
-    flex: 2;
 }
 
 .die,
@@ -78,13 +90,13 @@ input[type="text"] {
 }
 
 #bigdie {
-    background: linear-gradient(-135deg, #c05f5f, #8037b4);;
+    background: linear-gradient(-135deg, #c05f5f, #8037b4);
 }
 
-.die * ,
+.die *,
 #bigdie *,
 #controller * {
-    margin: 10px; 
+    margin: 10px;
     width: 60px;
     padding: 1px;
     border: 1px;
@@ -92,6 +104,9 @@ input[type="text"] {
     user-select: none;
 }
 
-#plus_img,#minus_img,#die_img,.roll {
+#plus_img,
+#minus_img,
+#die_img,
+.roll {
     width: 40px;
 }
